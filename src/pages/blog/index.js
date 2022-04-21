@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
 
+
 const BlogPage = ({data}) => {
     return(
         <Layout PageTitle="My Blog Posts">
@@ -29,6 +30,11 @@ query {
       frontmatter {
         date
         title
+         hero_image {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
       }
       id
       slug
