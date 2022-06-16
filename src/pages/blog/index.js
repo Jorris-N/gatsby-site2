@@ -9,13 +9,17 @@ const BlogPage = ({data}) => {
     return(
         <Layout PageTitle="My Blog Posts">
             <div>
-                <p>My blog posts will go Here</p>
+                <p className={"capitalize mt-6 text-lg text-sky-600 text-center font-bold mb-4"}>My blog posts will go Here</p>
               {
                   data.allMdx.nodes.map ((node) => (
-                      <article key={node.id}>
-                          <h2><Link to={node.slug}> {node.frontmatter.title} </Link></h2>
-                          <p>Posted: {node.frontmatter.date}</p>
+                    <div className={"place-content-center"}>
+                      <article  key={node.id}>
+                        <div className={"mb-6"}>
+                          <h2 className={"text-red-600 text-center font-semibold"}><Link to={node.slug}> {node.frontmatter.title} </Link></h2>
+                          <p className={"text-center"}>Posted: {node.frontmatter.date}</p>
+                        </div>
                       </article>
+                    </div>
                   ))
               }
             </div>
