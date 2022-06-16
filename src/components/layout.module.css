@@ -1,7 +1,8 @@
 .container{
     margin: auto;
-    max-width: 500px;
+    width: 1024px;
     font-family: sans-serif;
+    height: 100vh;
 }
  nav{
     background-color: thistle;
